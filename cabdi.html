@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <title>USD to SOS - Pro Version</title>
+    <link rel="stylesheet" href="mk.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">Lacag Beddele</div>
+    <ul class="nav-links">
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('services')">Services</a></li>
+        <li><a href="#" onclick="showPage('about')">About</a></li>
+        <li><a href="#" onclick="showPage('signup')">Signup/Login</a></li>
+        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <section id="home" class="page active">
+        <h2>Beddelaha Lacagta (USD -> SOS)</h2>
+        <div class="form-group">
+            <label>Geli Cadadka Doolarka ($):</label>
+            <input type="number" id="usdAmount" placeholder="Tusaale: 10">
+        </div>
+        <button onclick="convert()">Beddel Lacagta</button>
+        <p id="feedback" class="message"></p>
+        <h3 id="result" class="result-box"></h3>
+        <h4>Taariikhda Xisaabaadka:</h4>
+        <ul id="historyList"></ul>
+    </section>
+
+    <section id="services" class="page">
+        <h2>Adeegyadayada</h2>
+        <ul>
+            <li>Xawaaladaha Dibadda</li>
+            <li>Beddelka Lacagaha Online-ka</li>
+            <li>Kaararka Bankiga (Visa/Mastercard)</li>
+        </ul>
+    </section>
+    <section id="about" class="page">
+    <h2>Nagu Saabsan</h2>
+    <p>Waxaan nahay shirkad ku takhasustay fududeynta xisaabaadka iyo beddelka lacagaha qalaad, gaar ahaan Shiling Soomaaliga iyo Doolarka.</p>
+    <div class="stats">
+        <p><strong>Abaabulka:</strong> 2026</p>
+        <p><strong>Ujeedka:</strong> Fududeyn xisaabeed hufan.</p>
+    </div>
+</section>
+
+    <section id="signup" class="page">
+        <h2>Ku biir Adeegga</h2>
+        <form id="authForm" onsubmit="handleAuth(event)">
+            <input type="email" id="email" placeholder="Email-kaaga" required>
+            <input type="password" id="password" placeholder="Password-kaaga" required>
+            <button type="submit">Gali/Saxiix</button>
+        </form>
+    </section>
+
+    <section id="contact" class="page">
+        <h2>Nala soo xiriir</h2>
+        <p>Email: support@lacag.so</p>
+        <p>Tel: +252 611177673</p>
+    </section>
+</div>
+
+<script src="lik.js"></script>
+</body>
+</html>
